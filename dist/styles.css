@@ -1,0 +1,395 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fffefc;
+  color: #00000099;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #111;
+}
+
+header {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+button,
+label,
+input,
+select {
+  cursor: pointer;
+  color: inherit;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-size: inherit;
+}
+
+form {
+  display: flex;
+  margin: 0.5rem auto;
+}
+
+label {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 0.5rem;
+  font-size: 1.4rem;
+}
+
+input {
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.3rem;
+}
+
+select {
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  padding: 0.25rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin: 0 0 0.5rem;
+}
+
+.subtitle {
+  font-size: 2rem;
+  margin: 0.5rem 0 0;
+  font-weight: 500;
+}
+
+.hide-todo-list > ul,
+.hide-todo-list .add-todo-btn {
+  display: none;
+}
+
+.project-card {
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  border: 1px solid #00000022;
+  border-radius: 4px;
+}
+.project-card:hover {
+    border: 3px solid #00000022;
+}
+
+.project-header {
+  margin: 0 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #00000011;
+}
+
+.project-title {
+  margin: 0;
+  padding-bottom: 0.5rem;
+  text-align: left;
+  font-size: 1.9rem;
+}
+
+.edit-project-title-form {
+  margin: 0;
+  padding: 0 0 0.5rem;
+}
+
+.edit-project-input {
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  font-size: 1.9rem;
+}
+
+.project-utils,
+.todo-item-utils {
+  pointer-events: none;
+  opacity: 0;
+  font-size: 1.3rem;
+  transition: opacity 200ms;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1rem;
+  font-size: 1.4rem;
+}
+
+.todo-item-container {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+}
+
+.todo-check {
+  margin: 0 0.5rem 0 0;
+}
+
+.todo-check:checked + .todo-item-task {
+  text-decoration: line-through;
+  color: #00000099;
+  font-weight: 500;
+}
+
+.todo-item-task {
+  cursor: pointer;
+  color: #000000aa;
+  margin: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.priority-marker {
+  margin-left: auto;
+  margin-right: 0.25rem;
+  width: 6rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  border-radius: 3rem;
+  font-size: 1.2rem;
+  padding: 0.25rem;
+}
+
+.low {
+  border: 2px solid #0fa10fc9;
+  background-color: #18ca18a9;
+  color: #017c01;
+}
+
+.medium {
+  border: 2px solid #ffa600da;
+  background-color: #ffa600ad;
+  color: #c58205;
+}
+
+.high {
+  border: 2px solid #fa0606e0;
+  background-color: #ff00009a;
+  color: #a00404;
+}
+
+.todo-edit-btn,
+.todo-delete-btn {
+  padding: 0.25rem;
+}
+
+.todo-info {
+  display: none;
+  margin: 0.125rem 0 0.5rem 1.75rem;
+  font-size: 1.3rem;
+}
+
+.todo-due {
+  margin-top: 0.25rem;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.new-todo-form,
+.edit-todo-form {
+  padding: 0.75rem;
+  border: 1px solid #00000011;
+  display: flex;
+  flex-direction: column;
+}
+
+.new-todo-form-container,
+.edit-todo-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.new-todo-form-label,
+.edit-todo-label {
+  font-size: 1.3rem;
+}
+
+.new-todo-form-input,
+.edit-todo-input {
+  margin: 0.25rem 0;
+  width: 50%;
+  flex: 1;
+  font-size: 1.2rem;
+}
+
+#new-todo-form-due-date-input,
+#edit-todo-due-date {
+  margin-left: 1.5rem;
+}
+
+.submit-todo-btn,
+.add-project-btn,
+.update-todo-btn {
+  padding: 0 0 0.25rem;
+  border-bottom: 1px solid #00000000;
+  transition: all 400ms;
+}
+
+.submit-todo-btn,
+.update-todo-btn {
+  width: fit-content;
+  margin: 0.75rem auto 0;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.project-footer {
+  display: flex;
+  align-items: center;
+}
+
+.num-todos {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.add-todo-btn {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.project-button {
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 200ms;
+}
+
+.flip {
+  animation: flip forwards;
+}
+
+@keyframes flip {
+  100% {
+    transform: rotateX(180deg);
+  }
+}
+
+.add-project-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+
+.add-project-btn {
+  background-color: transparent;
+  color: inherit;
+  font-size: 1.6rem;
+}
+
+.add-project-btn:hover,
+.submit-todo-btn:hover {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+.add-project-form {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-project-input {
+  width: 60%;
+}
+
+.hide-form {
+  display: none;
+}
+
+@media (min-width: 767.98px) {
+  html {
+    font-size: 100%;
+  }
+
+  .project-card {
+    width: 75%;
+  }
+
+  .todo-item-container {
+    margin: 0.75rem 0;
+  }
+
+  .todo-check {
+    transform: scale(1.5);
+    margin-right: 1rem;
+  }
+
+  .todo-item-utils {
+    margin-left: 1rem;
+  }
+
+  .todo-info {
+    width: 80%;
+  }
+
+  .todo-description {
+    line-height: 2rem;
+  }
+}
+
+@media (min-width: 1023.98px) {
+  .project-card {
+    width: 60%;
+  }
+
+  .add-project-form {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1439.98px) {
+  .project-card {
+    width: 50%;
+  }
+
+  .add-project-form {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1601px) {
+  .project-card {
+    width: 40%;
+  }
+}
